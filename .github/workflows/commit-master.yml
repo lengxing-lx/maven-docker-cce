@@ -30,7 +30,7 @@ jobs:
         obsutil/obsutil version
         obsutil/obsutil config -i=${{ secrets.HUAWEI_AK }} -k=${{ secrets.HUAWEI_SK }} -e=obs.cn-north-4.myhuaweicloud.com
         obsutil/obsutil ls -s
-        obsutil/obsutil cp target/intro.war obs://huaweihdnbucket/workflow/intro/latest/
+        obsutil/obsutil cp target/intro.war obs://huaweihdnbucket/workflow/intro/v1.0.0.1/
         obsutil/obsutil ls -s obs://huaweihdnbucket/workflow/intro/v1.0.0.1/
 
     - name: check docker version
