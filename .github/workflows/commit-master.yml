@@ -22,7 +22,7 @@ jobs:
       run: mvn clean -U package -Dmaven.test.skip 
 
     - name: install obs and upload war/jar to obs
-      run |
+      run: |
         wget https://obs-community.obs.cn-north-1.myhuaweicloud.com/obsutil/current/obsutil_linux_amd64.tar.gz
         tar -zxf obsutil_linux_amd64.tar.gz
         mv obsutil_linux_amd64_5.3.4 obsutil
