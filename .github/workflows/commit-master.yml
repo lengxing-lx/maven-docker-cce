@@ -25,12 +25,12 @@ jobs:
       run: docker -v
       
     # docker login,设置登陆到华为的swr
-    - name: Login to Docker Hub
+    - name: Login to huawei SWR
       uses: docker/login-action@v1
       with:
         registry: "swr.cn-north-4.myhuaweicloud.com"
         username: ${{ secrets.SWR_USERNAME }}
-       password: ${{ secrets.SWR_PASSWD }}
+        password: ${{ secrets.SWR_PASSWD }}
 
     # 设置 docker 环境
     - name: Set up Docker Buildx
