@@ -79,7 +79,7 @@ jobs:
     # 在目标机器上安装docker,如果无法下载脚本，可以使用这个脚本
 #    - name: install docker on server by install-docker.sh
 #      run |
-#        sshpass -p ${{ secrets.CCE_PASSWORD }}  scp  -o StrictHostKeyChecking=no root@182.92.156.203 "sh /tmp/install-docker.sh"
+#        sshpass -p ${{ secrets.CCE_PASSWORD }}  scp  -o StrictHostKeyChecking=no install-docker.sh root@182.92.156.203:/tmp/ "sh /tmp/install-docker.sh"
 #        sshpass -p ${{ secrets.CCE_PASSWORD }}  ssh -o StrictHostKeyChecking=no root@182.92.156.203 "systemctl enable docker.service && systemctl start docker.service && docker -v"
 
     # 在目标机器上安装docker,如果docker已经安装好,可以将这一步骤注释
